@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="https://bootswatch.com/4/cyborg/bootstrap.min.css" />
+    <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
+  </head>
+  <body>
+    
+      <div class="container card mb-3 mt-5 pb-3" style="max-width: 30rem"> 
+        <div class="pt-1 pl-1 d-flex align-items-baseline">
+          <i class="fas fa-key mr-2" style="font-size: 1.2rem"></i>
+          <h5 class="text-center card-title">Password Generator</h5>
+        </div>
+        
+        <div class="card-body d-flex justify-content-between align-items-center">
+          <span class="form-control " id="result"></span>
+          <button class="btn btn-primary ml-1" id="clipboard" >
+            <i class="fas fa-clipboard"></i>
+          </button>
+        </div>
+        <div>
+        <div class="input-group mb-2 d-flex justify-content-between align-items-center">
+          <label class="form-check-label text-md-left">Password length</label>
+          <div class="input-group-append ">
+            <div class="input-group-text">
+              <input  type="number" id="length" min="4" max="20" value="20" />
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-2 d-flex justify-content-between align-items-center">
+          <label class="form-check-label text-md-left">Include uppercase letters</label>
+          <div class="input-group-append ">
+            <div class="input-group-text">
+              <input class="form-check-input" type="checkbox" id="uppercase" checked />
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-2 d-flex justify-content-between align-items-center">
+          <label class="form-check-label text-md-left">Include lowercase letters</label>
+          <div class="input-group-append ">
+            <div class="input-group-text">
+              <input class="form-check-input" type="checkbox" id="lowercase" checked />
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-2 d-flex justify-content-between align-items-center">
+          <label class="form-check-label text-md-left">Include numbers</label>
+          <div class="input-group-append ">
+            <div class="input-group-text">
+              <input class="form-check-input" type="checkbox" id="numbers" checked />
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-2 d-flex justify-content-between align-items-center">
+          <label class="form-check-label text-md-left">Include symbols</label>
+          <div class="input-group-append ">
+            <div class="input-group-text">
+              <input class="form-check-input" type="checkbox" id="symbols" checked />
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-primary btn-lg btn-block mt-3" id="generate" >Generate password</button>
+    </div>
+    <div class="modal fade" id="modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body text-center">
+            Password has been successfully copied to the clipboard!
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+    
+  </body>
+</html>
